@@ -54,8 +54,6 @@
 					ajaxUpdate: [],
 					ajaxVar: 'ajax',
 					ajaxType: 'GET',
-					csrfTokenName: null,
-					csrfToken: null,
 					pagerClass: 'pager',
 					loadingClass: 'loading',
 					filterClass: 'filters',
@@ -316,12 +314,6 @@
 					if (options.data === undefined) {
 						options.data = $(settings.filterSelector).serialize();
 					}
-				}
-				if (settings.csrfTokenName && settings.csrfToken) {
-					if (typeof options.data=='string')
-						options.data+='&'+settings.csrfTokenName+'='+settings.csrfToken;
-					else
-						options.data[settings.csrfTokenName] = settings.csrfToken;
 				}
 				if(yiiXHR[id] != null){
 					yiiXHR[id].abort();

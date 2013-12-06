@@ -435,10 +435,7 @@ abstract class CActiveRecord extends CModel
 	 */
 	public function tableName()
 	{
-		$tableName = get_class($this);
-		if(($pos=strrpos($tableName,'\\')) !== false)
-			return substr($tableName,$pos+1);
-		return $tableName;
+		return get_class($this);
 	}
 
 	/**
@@ -1075,7 +1072,7 @@ abstract class CActiveRecord extends CModel
 		{
 			Yii::trace(get_class($this).'.insert()','system.db.ar.CActiveRecord');
 			$builder=$this->getCommandBuilder();
-			$table=$this->getTableSchema();
+			$table=$this->getMetaData()->tableSchema;
 			$command=$builder->createInsertCommand($table,$this->getAttributes($attributes));
 			if($command->execute())
 			{
@@ -1275,7 +1272,7 @@ abstract class CActiveRecord extends CModel
 	 */
 	public function getPrimaryKey()
 	{
-		$table=$this->getTableSchema();
+		$table=$this->getMetaData()->tableSchema;
 		if(is_string($table->primaryKey))
 			return $this->{$table->primaryKey};
 		elseif(is_array($table->primaryKey))
@@ -1299,7 +1296,7 @@ abstract class CActiveRecord extends CModel
 	public function setPrimaryKey($value)
 	{
 		$this->_pk=$this->getPrimaryKey();
-		$table=$this->getTableSchema();
+		$table=$this->getMetaData()->tableSchema;
 		if(is_string($table->primaryKey))
 			$this->{$table->primaryKey}=$value;
 		elseif(is_array($table->primaryKey))
@@ -1595,8 +1592,8 @@ abstract class CActiveRecord extends CModel
 	public function count($condition='',$params=array())
 	{
 		Yii::trace(get_class($this).'.count()','system.db.ar.CActiveRecord');
-		$this->beforeCount();
 		$builder=$this->getCommandBuilder();
+		$this->beforeCount();
 		$criteria=$builder->createCriteria($condition,$params);
 		$this->applyScopes($criteria);
 
@@ -2085,16 +2082,6 @@ class CStatRelation extends CBaseActiveRelation
 	 * receive a statistical query result. Defaults to 0.
 	 */
 	public $defaultValue=0;
-	/**
-	 * @var mixed scopes to apply
-	 * Can be set to the one of the following:
-	 * <ul>
-	 * <li>Single scope: 'scopes'=>'scopeName'.</li>
-	 * <li>Multiple scopes: 'scopes'=>array('scopeName1','scopeName2').</li>
-	 * </ul>
-	 * @since 1.1.15
-	 */
-	public $scopes;
 
 	/**
 	 * Merges this relation with a criteria specified dynamically.
