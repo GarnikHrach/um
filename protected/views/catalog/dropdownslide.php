@@ -40,6 +40,7 @@
                             <span class="sdt_wrap">
                                     <span class="sdt_link">МАНИПУЛЯТОРЫ</span>
                                     <span class="sdt_descr">My work</span>
+                                    
                             </span>
                     </a>
                     <div class="sdt_box">
