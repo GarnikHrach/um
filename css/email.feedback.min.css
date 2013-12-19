@@ -1,0 +1,46 @@
+#feedback{width:600px;background-color:#E8E8E8;font-family:"Segoe UI",Tahoma,Arial,Helvetica,sans-serif;padding:20px;}
+#feedback .hint-container{width:100%;background-color:#2B5797;border:1px solid #2B5797;color:#FFF;font-size:12px;text-align:left;}
+#feedback .hint-container .hint{padding:2px 2px 2px 5px;}
+#feedback .field{margin:0 0 10px;}
+#feedback .field-container{width:100%;height:40px;background-color:#fff;border:1px solid #00A300;margin:0;padding:0;}
+#feedback .field-name{width:25%;height:100%;float:left;text-transform:uppercase;background-color:#00A300;color:#fff;text-align:left;}
+#feedback .field-name label{position:relative;display:block;padding:10px 0 0 32px;}
+#feedback .input-container{float:left;width:74%;height:100%;text-align:center;}
+#feedback input{height:100%;width:99%;background-color:#fff;font-size:15px;border:0;padding:0 4px;}
+#feedback .message-container{width:100%;border:1px solid #FFC40D;}
+#feedback .message-container .textarea-name{width:100%;height:40px;background-color:#FFC40D;color:#fff;text-transform:uppercase;text-align:left;}
+#feedback .message-container .textarea-name label{position:relative;display:block;padding:8px 0 0 32px;}
+#feedback .textarea-container{width:100%;height:140px;background-color:#fff;margin:0;padding:0;}
+#feedback textarea{width:95%;height:80%;border:0;font-size:15px;font-family:"Segoe UI",Tahoma,Arial,Helvetica,sans-serif;padding:10px;}
+#feedback textarea[disabled]{background-color:#FFF;}
+#feedback .buttons{width:100%;text-align:right;}
+#feedback .buttons .button{display:inline-block;cursor:pointer;font-size:18px;background-color:#2D89EF;color:#fff;padding:8px 20px 8px 48px;}
+#feedback .buttons .button:hover{background-color:#4EA0DB;}
+#feedback .error{width:100%;background-color:#F7C3C3;border:1px dashed #3D0000;color:#3D0000;text-align:left;margin:5px 0 0;}
+#feedback .error .message{font-size:12px;padding:10px 10px 10px 32px;}
+#feedback .error .message ul{list-style:none;margin:0;padding:0;}
+#feedback .nameicon{background-image:url(../img/field_name.png);background-repeat:no-repeat;background-position:2px center;}
+#feedback .emailicon{background-image:url(../img/field_email.png);background-repeat:no-repeat;background-position:2px center;}
+#feedback .messageicon{background-image:url(../img/field_message.png);background-repeat:no-repeat;background-position:2px center;}
+#feedback .alerticon{background-image:url(../img/alert.png);background-repeat:no-repeat;background-position:2px center;}
+#feedback #send.sendicon{background-image:url(../img/btn_arrow.png);background-repeat:no-repeat;background-position:8px center;}
+#feedback .loading{display:inline-block;font-size:18px;color:#5E5E5E;padding:8px 20px 8px 48px;}
+#feedback .pushmessage{background-color:#B91D47;color:#FFF;padding:20px;}
+#feedback p{margin:0;padding:3px;}
+#feedback .turnon{display:block;}
+#feedback .turnoff{display:none;}
+#feedback .greyBtn{background-color:#606060!important;}
+#feedback .purpleBtn:hover{background-color:#C244C9!important;}
+#feedback .sweetyBorder{border:1px solid #FF6347!important;}
+#feedback .sweetyTextAreaBorder{border:1px solid red!important;}
+#feedback .sweetyBtn:hover{background-color:#FF4500!important;}
+#feedback .peachpuffTextArea{background-color:#FFDAB9!important;color:#8B4C39!important;}
+#feedback .peachpuffBtn:hover{background-color:#CD8162!important;}
+#feedback input:focus,#feedback textarea:focus{outline:none;}
+#feedback .greyField,#feedback .greyTextArea,#feedback .greyBtn:hover{background-color:#8E8E8E!important;}
+#feedback .greyBorder,#feedback .greyTextAreaBorder{border:1px solid #8E8E8E!important;}
+#feedback .purpleField,#feedback .purpleTextArea,#feedback .purpleBtn{background-color:#9F00A7!important;}
+#feedback .purpleBorder,#feedback .purpleTextAreaBorder{border:1px solid #9F00A7!important;}
+#feedback .sweetyField,#feedback .sweetyTextArea,#feedback .sweetyBtn{background-color:red!important;}
+#feedback .peachpuffField,#feedback .peachpuffBtn{background-color:#CDB38B!important;color:#8B4C39!important;}
+#feedback .peachpuffBorder,#feedback .peachpuffTextAreaBorder{border:1px solid #CDAF95!important;}
