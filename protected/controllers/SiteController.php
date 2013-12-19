@@ -18,7 +18,10 @@ class SiteController extends Controller
 			'page'=>array(
 				'class'=>'CViewAction',
 			),
+<<<<<<< HEAD
                         
+=======
+>>>>>>> cf3b30f6115121d95356876dc342d29d0ba20df4
 		);
 	}
 
